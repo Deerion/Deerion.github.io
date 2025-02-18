@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Tło górskie */
+/* Tło dla ogólnego widoku */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,10 +16,10 @@ body {
 /* Parallax Effect */
 header {
     position: relative;
-    background-image: url('img/tlo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background-image: url('img/tlo.jpg'); /* Tło domyślne */
+    background-size: cover; /* Tło dostosowane do rozmiaru */
+    background-position: center center; /* Wyśrodkowanie tła */
+    height: 100vh; /* Wysokość tła na całym ekranie */
     color: white;
     text-align: center;
     display: flex;
@@ -37,7 +37,7 @@ header::before {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* Przyciemnienie tła */
-    z-index: -1; /* Przyciemnienie tła jest pod innymi elementami */
+    z-index: -1; /* Tło jest pod innymi elementami */
 }
 
 /* Treść w nagłówku */
@@ -55,7 +55,7 @@ header::before {
 
 /* Stylowanie przycisku menu */
 .menu-toggle {
-    font-size: 30px;
+    font-size: 10px;
     color: white;
     cursor: pointer;
     padding: 20px;
@@ -162,16 +162,10 @@ footer {
 }
 
 /* Media Query dla urządzeń o szerokości 480px i mniejszych (małe urządzenia mobilne) */
-@media (max-width: 480px) {
-    .header-content h1 {
-        font-size: 2rem;
-    }
-
-    .header-content p {
-        font-size: 1rem;
-    }
-
-    .sidebar {
-        padding-top: 50px; /* Zmniejszenie odstępu na małych ekranach */
+@media (max-width: 768px) {
+    header {
+        background-image: url('img/tlo-mobile.jpg'); /* Tło zmienia się na mobilnym urządzeniu */
+        background-size: cover; /* Tło wypełnia cały ekran */
+        background-position: center center; /* Ustawienie tła na środek */
     }
 }
