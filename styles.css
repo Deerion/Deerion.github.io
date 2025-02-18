@@ -55,7 +55,7 @@ header::before {
 
 /* Stylowanie przycisku menu */
 .menu-toggle {
-    font-size: 10px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
     padding: 20px;
@@ -133,4 +133,45 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+}
+
+/* Media Query dla ekranów o szerokości 768px i mniejszych (urządzenia mobilne) */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Stylowanie menu na urządzeniach mobilnych */
+    .sidebar {
+        width: 100%; /* Menu rozciąga się na całą szerokość ekranu */
+    }
+
+    .sidebar ul li {
+        margin: 10px 0; /* Mniejsze odstępy */
+    }
+
+    .menu-toggle {
+        font-size: 35px; /* Większy przycisk na mniejszych ekranach */
+        top: 15px;
+        left: 15px;
+    }
+}
+
+/* Media Query dla urządzeń o szerokości 480px i mniejszych (małe urządzenia mobilne) */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .sidebar {
+        padding-top: 50px; /* Zmniejszenie odstępu na małych ekranach */
+    }
 }
