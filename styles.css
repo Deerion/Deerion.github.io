@@ -166,7 +166,7 @@ footer {
     header {
         background-size: contain; /* Tło będzie widoczne w całości, ale nie przycięte */
         background-position: center center; /* Wyśrodkowanie tła */
-        
+        height: auto; /* Wysokość tła dostosowana do zawartości */
     }
 
     .header-content h1 {
@@ -187,7 +187,7 @@ footer {
     }
 
     .menu-toggle {
-        font-size: 20px; /* Większy przycisk na mniejszych ekranach */
+        font-size: 35px; /* Większy przycisk na mniejszych ekranach */
         top: 15px;
         left: 15px;
     }
