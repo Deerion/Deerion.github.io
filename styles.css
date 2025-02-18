@@ -164,7 +164,7 @@ footer {
 /* Media Query dla urządzeń o szerokości 480px i mniejszych (małe urządzenia mobilne) */
 @media (max-width: 768px) {
     header {
-        background-size: contain; /* Tło będzie widoczne w całości, ale nie przycięte */
+      /*  background-size: contain; /* Tło będzie widoczne w całości, ale nie przycięte */
         background-position: center center; /* Wyśrodkowanie tła */
         height: auto; /* Wysokość tła dostosowana do zawartości */
     }
