@@ -9,13 +9,14 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Parallax Effect */
 header {
     position: relative;
-    background-image: url('img/mountains.jpg');
+    background-image: url('img/tlo.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -25,7 +26,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 1;
+    z-index: 0;
 }
 
 header::before {
@@ -36,7 +37,7 @@ header::before {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* Przyciemnienie tła */
-    z-index: -1;
+    z-index: -1; /* Przyciemnienie tła jest pod innymi elementami */
 }
 
 /* Treść w nagłówku */
@@ -52,6 +53,67 @@ header::before {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Stylowanie przycisku menu */
+.menu-toggle {
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    position: fixed; /* Pozycjonowanie absolutne na ekranie */
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    z-index: 9999; /* Bardzo wysoki z-index, aby przycisk był zawsze na wierzchu */
+}
+
+.menu-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Początkowo menu ukryte */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Przezroczyste tło (czarne z 70% przezroczystości) */
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    color: white;
+    z-index: 3; /* Menu jest pod przyciskiem */
+}
+
+.sidebar.open {
+    left: 0px; /* Menu w pełni widoczne */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lekka zmiana koloru tła na hover */
+}
+
 /* Sekcja informacyjna */
 .info {
     padding: 50px 20px;
@@ -59,24 +121,12 @@ header::before {
     background-color: #f4f4f4;
 }
 
-.info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+/* Przepisy */
+section {
+    padding: 20px;
+    text-align: center;
 }
 
-.info p {
-    font-size: 1.2rem;
-    color: #555;
-}
-.blog {
-     padding: 50px 20px;
-    text-align: center;
-    background-color: red;
-}
-.info h1 {
-    font-size: 2.5rem;
-    margin-left: 20px;
-}
 /* Stopka */
 footer {
     text-align: center;
