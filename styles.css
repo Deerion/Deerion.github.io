@@ -187,7 +187,7 @@ footer {
     }
 
     .menu-toggle {
-        font-size: 35px; /* Większy przycisk na mniejszych ekranach */
+        font-size: 20px; /* Większy przycisk na mniejszych ekranach */
         top: 15px;
         left: 15px;
     }
