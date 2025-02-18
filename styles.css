@@ -17,7 +17,7 @@ body {
 header {
     position: relative;
     background-image: url('img/tlo.jpg');
-    background-size: cover;
+    background-size: cover; /* Tło dostosowane do rozmiaru (na komputerze) */
     background-position: center;
     height: 100vh;
     color: white;
@@ -162,16 +162,33 @@ footer {
 }
 
 /* Media Query dla urządzeń o szerokości 480px i mniejszych (małe urządzenia mobilne) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    header {
+        background-size: contain; /* Tło będzie widoczne w całości, ale nie przycięte */
+        background-position: center center; /* Wyśrodkowanie tła */
+        height: auto; /* Wysokość tła dostosowana do zawartości */
+    }
+
     .header-content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .header-content p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
+    /* Stylowanie menu na urządzeniach mobilnych */
     .sidebar {
-        padding-top: 50px; /* Zmniejszenie odstępu na małych ekranach */
+        width: 100%; /* Menu rozciąga się na całą szerokość ekranu */
+    }
+
+    .sidebar ul li {
+        margin: 10px 0; /* Mniejsze odstępy */
+    }
+
+    .menu-toggle {
+        font-size: 35px; /* Większy przycisk na mniejszych ekranach */
+        top: 15px;
+        left: 15px;
     }
 }
