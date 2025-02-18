@@ -162,33 +162,16 @@ footer {
 }
 
 /* Media Query dla urządzeń o szerokości 480px i mniejszych (małe urządzenia mobilne) */
-@media (max-width: 768px) {
-    header {
-      /*  background-size: contain; /* Tło będzie widoczne w całości, ale nie przycięte */
-        background-position: center; /* Wyśrodkowanie tła */
-        height: auto; /* Wysokość tła dostosowana do zawartości */
-    }
-
+@media (max-width: 480px) {
     .header-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .header-content p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
-    /* Stylowanie menu na urządzeniach mobilnych */
     .sidebar {
-        width: 100%; /* Menu rozciąga się na całą szerokość ekranu */
-    }
-
-    .sidebar ul li {
-        margin: 10px 0; /* Mniejsze odstępy */
-    }
-
-    .menu-toggle {
-        font-size: 35px; /* Większy przycisk na mniejszych ekranach */
-        top: 15px;
-        left: 15px;
+        padding-top: 50px; /* Zmniejszenie odstępu na małych ekranach */
     }
 }
