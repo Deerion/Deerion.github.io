@@ -16,7 +16,7 @@ body {
 /* Parallax Effect */
 header {
     position: relative;
-    background-image: url('img/tlo.jpg');
+    background-image: url('img/tlo2.jpg');
     background-size: cover; /* Tło dostosowane do rozmiaru (na komputerze) */
     background-position: center;
     height: 100vh;
